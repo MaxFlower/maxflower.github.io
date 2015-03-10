@@ -1,19 +1,18 @@
-var app=angular.module('refresh_div',[]);
-//make controller and interval within
-app.controller('Changer', function($scope,$interval){
-	$scope.blocks = [
-		{item: '1', number: getRandomInt()},
-		{item: '2', number: getRandomInt()},
-		{item: '3', number: getRandomInt()},
-	];
-
-	function getRandomInt(){
-			return (Math.random()*100).toFixed(0);
-	};
-
-	$interval(function(){
-		for (var i=0; i<3; i++){
-			$scope.blocks[i].number = getRandomInt();
-		}
-	},5000);
+var app = angular.module('refresh_div',[]);
+//make directive with $interval
+    app.directive('tbWidget', function($interval){
+	return function($scope, element, attrs){
+		$scope.$watch(attrs.tbWidget, function(value){
+			$interval (function(){
+				//get random integer
+				var getRandom = (Math.random()*100).toFixed(0);
+				element.text(getRandom);
+				//reset Class for every box
+				element.removeClass('black').removeClass('green').removeClass('red');
+				//set appropriated Class for Element
+				getRandom <21 ? element.addClass('red'): (getRandom > 79 ? element.addClass('green') : element.addClass('black'));						
+			//set interval
+			}, 5000);			
+		});
+	}	
 });
