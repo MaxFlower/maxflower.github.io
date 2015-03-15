@@ -58,7 +58,9 @@ Max Tsvetkov
 	margin: 0 auto;
 	padding: 40px 0;	
 }
-.box {
+.lowValue,
+.midValue,
+.highValue {
 	float: left;
 	width: 31%;
 	min-height: 50px;
@@ -68,12 +70,12 @@ Max Tsvetkov
 	font-size: 20px;
 	line-height: 45px;
 }
-.box:first-child {
+.wrapper div:first-child {
 	margin-left: 0;
 }
-.box.red {color: red;}
-.box.black {color: black;}
-.box.green {color: green;}
+.lowValue {color: red;}
+.midValue {color: black;}
+.highValue {color: green;}
 .clear {
 	clear: both;
 }
@@ -86,7 +88,9 @@ only screen and (min-device-width: 480px) and (max-device-width: 768px) {
 	margin: 0 auto;
 	padding: 40px 5%;
 }
-.box {
+.lowValue,
+.midValue,
+.highValue {
 	width: 90%;
 	float: none;
 	min-height: 50px;
