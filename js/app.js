@@ -1,23 +1,37 @@
 var app = angular.module('refresh_div',[]);
-//make directive with $interval
-        
-    app.directive('widget', function($interval){
+
+    //make service    
+    app.service('getRandomService', function(){
+    	this.getRandom = function(){
+    		return (Math.random()*100).toFixed(0);	
+    	};
+    });
+
+	//make directive with $interval
+    app.directive('widget', ['getRandomService', function($scope, $interval, getRandomService){
 		return {
-				template: '<div class="{{valclass}}">{{random}}</div>',
-				replace: true,
-				scope: {},
 				restrict: 'E',
-
-				link: function (scope, element, attributes, controller) {
-		            scope.random = (Math.random()*100).toFixed(0);
-		            scope.random <21 ? scope.valclass = 'lowValue': (scope.random > 79 ? scope.valclass = 'highValue' : scope.valclass = 'midValue');
+				template: '<div class="box">{{randomValue}}</div>',
+				replace: true,
+				scope: {
+					randomValue: '&',
+					valueType: '&'
+				},				
+				link: function ($scope, element, attrs) {
+					$scope.$watch("randomValue", function(value){
+						if(value<25){$scope.valueType = 'low'}
+						else if(value>75){$scope.valueType = 'high'}
+						else {$scope.valueType = 'mid'}						 
+					})
 		        },
+				controller: function($scope, $interval, getRandomService) {
+					
+					function valueCicle(){
+						$scope.randomValue =  getRandomService.getRandom();						    																						
+					}
 
-				controller: function($scope, $interval) {
-					$scope.getnumber = $interval(function(){
-						$scope.random = (Math.random()*100).toFixed(0);
-						$scope.random <21 ? $scope.valclass = 'lowValue': ($scope.random > 79 ? $scope.valclass = 'highValue' : $scope.valclass = 'midValue');
-					}, 2000);
+					$interval(valueCicle, 2000);
+
         		}
 		}
-	});
+	}]);
