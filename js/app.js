@@ -2,36 +2,39 @@ var app = angular.module('refresh_div',[]);
 
     //make service    
     app.service('getRandomService', function(){
-    	this.getRandom = function(){
+    	this.getRandomValue = function(){
     		return (Math.random()*100).toFixed(0);	
     	};
+    	this.getValueType = function(value){
+    		if(value<25) return 'lowValue'
+			else if(value>75) return 'highValue'
+			else return 'midValue';	
+    	};
     });
+
 
 	//make directive with $interval
     app.directive('widget', ['getRandomService', function($scope, $interval, getRandomService){
 		return {
 				restrict: 'E',
-				template: '<div class="box">{{randomValue}}</div>',
+				template: '<div class="box" ng-class="valueType">{{randomValue}}</div>',
 				replace: true,
-				scope: {
-					randomValue: '&',
-					valueType: '&'
-				},				
-				link: function ($scope, element, attrs) {
-					$scope.$watch("randomValue", function(value){
-						if(value<25){$scope.valueType = 'low'}
-						else if(value>75){$scope.valueType = 'high'}
-						else {$scope.valueType = 'mid'}						 
-					})
-		        },
+				scope: {},	
+
+				
 				controller: function($scope, $interval, getRandomService) {
-					
+					//Ctrlfunction
 					function valueCicle(){
-						$scope.randomValue =  getRandomService.getRandom();						    																						
+						$scope.randomValue =  getRandomService.getRandomValue();
+						$scope.valueType = getRandomService.getValueType($scope.randomValue);						    																						
 					}
 
+					//init
+					valueCicle();					
+
+					//set life interval
 					$interval(valueCicle, 2000);
 
         		}
 		}
-	}]);
+}]);
