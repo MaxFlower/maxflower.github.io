@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="page-header">
-	  <h1>My projects and examples <small> Samples, mistakes and achievements</small></h1>
+	  <h1>Мои работы и наработки <small> Примеры, ошибки, решения.</small></h1>
 	</div>
 
 	<div class="row">
@@ -8,9 +8,9 @@
 	    <div class="thumbnail">
 	      <img src="images/screen_railroads.jpg" alt="...">
 	      <div class="caption">
-	        <h3>My HTML/CSS projects</h3>
-	        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-	        <p><a href="examples/projects" class="btn btn-primary" role="button">All items</a></p>
+	        <h3>Мои проекты</h3>
+	        <p>Так как я только недавно вернулся к веб-технологиям, то познавать многое приходится методом проб и ошибок. Буду рад Вашей оценке выполненных мною работ.</p>
+	        <p><a href="examples/projects" class="btn btn-primary" role="button">К проектам</a></p>
 	      </div>
 	    </div>
 	  </div>
@@ -18,8 +18,8 @@
 	    <div class="thumbnail">
 	      <img src="images/Angular.png" alt="...">
 	      <div class="caption">
-	        <h3>My AngularJS examples</h3>
-	        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	        <h3>Мои пробы AngularJS</h3>
+	        <p>Появление таких фреймворков как AngularJS значительно упростило жизнь разработчикам. Само собой AngularJS можно разбавлять чем-нибудь, например ReactJS, или внедрять в готовые решения, например подключением виджета в Yii/Yii2</p>
 	        <p><a href="/404" class="btn btn-primary" role="button">All items</a></p>
 	      </div>
 	    </div>
@@ -28,8 +28,8 @@
 	    <div class="thumbnail">
 	      <img src="images/webdev.jpg" alt="...">
 	      <div class="caption">
-	        <h3>My Blog</h3>
-	        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	        <h3>Мой Блог</h3>
+	        <p>Все самое интересное с чем мне приходилось сталкиваться. Чтобы не забыть, надо публиковать!</p>
 	        <p><a href="/404" class="btn btn-primary" role="button">All items</a></p>
 	      </div>
 	    </div>
@@ -40,11 +40,14 @@
 
 	<div class="panel panel-default">
 	  <div class="panel-heading">
-	    <h3 class="panel-title">For Example:</h3>
+	    <h3 class="panel-title">Мини-пример:</h3>
 	  </div>
 	  <div class="panel-body">
-	    Angular-project contains custom-directive 'widget', witch hat got attribute 'src': cpu, memoryUsed or memoryAvailable.
-	    Below we have three boxes with limited random data. Every 2 sec You can see independed changing of values.
+	    Angular в действии!<br />
+	    <code>
+		    &lt;widget data-src="cpu"&gt;&lt;/widget&gt;		   
+		</code><br /> 
+	    Создаю пользовательскую директиву 'widget'. Источник данных -это 'scr'-аттрибут директивы, его я передаю <code> scope: {widgetSource:'@src'} </code>  в переменную <code>widgetSource</code>, которая через сервис <code> sourceLimits() </code> отправиться к сервису обработки <code>GetCurrentValue()</code>. <br />В данном примере источника три: cpu, memoryUsed или memoryAvailable. Каждый имеет свою размерность и свои лимиты, но текущее случайное значение они получают от единого сервиса. Обновление данных осуществляется каждые 2 секунды. 	    
 	  </div>
 	</div>
 
