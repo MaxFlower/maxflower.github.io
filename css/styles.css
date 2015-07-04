@@ -1,7 +1,12 @@
 /* SPA 18.02.2015
 Max Tsvetkov
 */
-body { padding-top: 70px; }
+body { 
+  
+  width: 100%;
+  min-height: 100%;
+  padding-top: 70px; 
+}
 .wrapper {
   width: 100%;
   min-height: 200px;

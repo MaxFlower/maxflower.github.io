@@ -1,0 +1,1 @@
+$scope.message = 'That is examplesPage!!!';
