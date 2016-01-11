@@ -1,65 +1,94 @@
 <!DOCTYPE html>
-<html ng-app="MaxFlowerApp">
-<head lang="en">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html lang="en">
+<head>
+  <title>Personal site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal site Resume">
+  <meta name="author" content="Tsvetkov Maxim">
 
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"/>
+  <script src="vendors/angular/angular.min.js"></script>    
+  <script src="vendors/angular-route/angular-route.min.js"></script>
 
-    <title>Max Tsvetkov - Personal site</title>
-
-    <script src="vendor/angular/angular.js"></script>    
-    <script src="http://code.angularjs.org/1.2.4/angular-route.js"></script>
-    <script src="js/main.js"></script>
-
-  
-    
-
-    <!-- Custom styles for this template -->
-
-    <link rel="stylesheet" type="text/css" href="css/jumbotron-narrow.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-
-   
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico">
+  <link rel="stylesheet" href="css/main.css" />
 </head>
-<body ng-controller="mainController">
- 
-        <!-- ШАПКА И НАВИГАЦИЯ -->
-        <header>
-            <nav class="navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Максим Цветков</a>
-                    <p class="navbar-text">Веб-разработка</p>
-                </div>
- 
+<body ng-app="MaxFlowerApp">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div class="row bgLayout">
+        <!--Left sidebar-->
+        <div class="sidebar col-xs-12 col-md-3">          
+          <h3>Макс Цветков</h3>          
+          <div class="kicker">Web-developer</div>          
+          <div class="avatar">
+            <img src="img/photo.jpg" alt="" />
+          </div>          
+          <p class="text-left">Привет! Я занимаюсь разработкой сайтов. Здесь Вы можете посмотреть мои работы, ознакомиться с резюме и связаться со мной.</p>
+
+          <div class="social">
+            <a href="#"><img src="img/phone_icon.png" alt="" />+7 962 263 38 76</a>
+            <a href="mailto:maxtsvet@rambler.ru"><img src="img/mail_icon.png" alt="" />maxtsvet@rambler.ru</a>
+            <a href="http://vk.com/id3548637"><img src="img/vk_icon.png" alt="" />VK</a>
+            <a href="http://www.twitter.com/marX_flowers"><img src="img/twitter_icon.png" alt="" />Twitter</a>
+          </div>          
+        <!--End of sidebar-->
+        </div><!--Main content
+        --><div class="content col-xs-12 col-md-9" ng-controller="mainController">
+          <!--Header-->
+          <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>                
+              </div>
+
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/"><i class="fa fa-home"></i> Главная</a></li>
-                    <li><a href="/examples"><i class="fa fa-shield"></i> Портфолио</a></li>
-                    <li><a href="/contact"><i class="fa fa-comment"></i> Контакты</a></li>
-                </ul>
-            </div>
-            </nav>
-        </header>
- 
-        <div id="main">
-            <div ng-view>               
-            </div>            
+                  <li><a href="/">Главная</a></li>
+                  <li><a href="/examples">Резюме/Портфолио</a></li>
+                  <li><a href="/contact">Контакты</a></li>
+                </ul> 
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>      
+          <!--Page container-->
+          <div class="page">
+            <!--include area for ng-view -->
+            <div ng-view></div>
+          </div>        
+        <!--End of main content-->
         </div>
-    <div class="footer">
-      <div class="container">
-        <p class="text-muted">Tsvetkov Maxim | 2015 | Bootstrap &amp; AngularJS | <a href="https://github.com/MaxFlower">I'm on GitHub</a></p>
       </div>
-    </div> 
- 
+    <!--End of container-->  
+    </div>  
+  </div>
+  
+  <footer class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <div class="copyright">2015 - Personal site(c)</div>
+      <div class="footwrapper">
+      <div class="contactdata">+79114992885 <br /> maxtsvet@rambler.ru</div>
+      <div class="social_horiz">
+        <a href="#"><img src="img/insta_icon_white.png" alt="" /></a>
+        <a href="http://www.twitter.com/marX_flowers"><img src="img/twitter_icon_white.png" alt="" /></a>
+        <a href="http://vk.com/id3548637"><img src="img/vk_icon_white.png" alt="" /></a>
+      </div>
+    </div>
+
+    </div>
+  </footer>
+
+<script src="vendors/jquery/dist/jquery.min.js" type="text/javascript"></script>
+<script src="js/app.js" type="text/javascript"></script>
+
+
 </body>
 </html>
