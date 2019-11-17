@@ -482,7 +482,7 @@ var header_style_default = /*#__PURE__*/__webpack_require__.n(header_style);
 
 
 
-var header__ref = Object(preact_min["h"])(
+var _ref = Object(preact_min["h"])(
 	'h1',
 	null,
 	'Preact App'
@@ -492,7 +492,7 @@ var header_Header = function Header() {
 	return Object(preact_min["h"])(
 		'header',
 		{ 'class': header_style_default.a.header },
-		header__ref,
+		_ref,
 		Object(preact_min["h"])(
 			'nav',
 			null,
@@ -500,16 +500,6 @@ var header_Header = function Header() {
 				match["Link"],
 				{ activeClassName: header_style_default.a.active, href: '/' },
 				'Home'
-			),
-			Object(preact_min["h"])(
-				match["Link"],
-				{ activeClassName: header_style_default.a.active, href: '/profile' },
-				'Me'
-			),
-			Object(preact_min["h"])(
-				match["Link"],
-				{ activeClassName: header_style_default.a.active, href: '/profile/john' },
-				'John'
 			)
 		)
 	);
@@ -520,7 +510,71 @@ var header_Header = function Header() {
 var home_style = __webpack_require__("ZAL5");
 var home_style_default = /*#__PURE__*/__webpack_require__.n(home_style);
 
+// CONCATENATED MODULE: ./components/skills-section/index.js
+
+
+
+var skills_section__ref = Object(preact_min["h"])(
+	'div',
+	null,
+	'Skills'
+);
+
+var Skills = function Skills() {
+	return skills_section__ref;
+};
+
+/* harmony default export */ var skills_section = (Skills);
+// CONCATENATED MODULE: ./components/work-section/index.js
+
+
+
+var work_section__ref = Object(preact_min["h"])(
+	'div',
+	null,
+	'Work'
+);
+
+var Work = function Work() {
+	return work_section__ref;
+};
+
+/* harmony default export */ var work_section = (Work);
+// CONCATENATED MODULE: ./components/education-section/index.js
+
+
+
+var education_section__ref = Object(preact_min["h"])(
+	'div',
+	null,
+	'Education'
+);
+
+var Education = function Education() {
+	return education_section__ref;
+};
+
+/* harmony default export */ var education_section = (Education);
+// CONCATENATED MODULE: ./components/projects-section/index.js
+
+
+
+var projects_section__ref = Object(preact_min["h"])(
+	'div',
+	null,
+	'Projects'
+);
+
+var Projects = function Projects() {
+	return projects_section__ref;
+};
+
+/* harmony default export */ var projects_section = (Projects);
 // CONCATENATED MODULE: ./routes/home/index.js
+
+
+
+
 
 
 
@@ -531,141 +585,41 @@ var home__ref = Object(preact_min["h"])(
 	'Maksim Tsvetkov'
 );
 
-var home__ref2 = Object(preact_min["h"])(
+var _ref2 = Object(preact_min["h"])(
 	'p',
 	null,
 	'Senior Frontend developer'
 );
+
+var _ref3 = Object(preact_min["h"])(work_section, null);
+
+var _ref4 = Object(preact_min["h"])(education_section, null);
+
+var _ref5 = Object(preact_min["h"])(skills_section, null);
+
+var _ref6 = Object(preact_min["h"])(projects_section, null);
 
 var home_Home = function Home() {
 	return Object(preact_min["h"])(
 		'div',
 		{ 'class': home_style_default.a.home },
 		home__ref,
-		home__ref2
+		_ref2,
+		_ref3,
+		_ref4,
+		_ref5,
+		_ref6
 	);
 };
 
 /* harmony default export */ var home = (home_Home);
-// EXTERNAL MODULE: ./routes/profile/style.css
-var profile_style = __webpack_require__("Tv6c");
-var profile_style_default = /*#__PURE__*/__webpack_require__.n(profile_style);
-
-// CONCATENATED MODULE: ./routes/profile/index.js
-
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-var profile_Profile = function (_Component) {
-	_inherits(Profile, _Component);
-
-	function Profile() {
-		var _temp, _this, _ret;
-
-		_classCallCheck(this, Profile);
-
-		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-			args[_key] = arguments[_key];
-		}
-
-		return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = {
-			time: Date.now(),
-			count: 10
-		}, _this.updateTime = function () {
-			_this.setState({ time: Date.now() });
-		}, _this.increment = function () {
-			_this.setState({ count: _this.state.count + 1 });
-		}, _temp), _possibleConstructorReturn(_this, _ret);
-	}
-
-	// update the current time
-
-
-	// gets called when this route is navigated to
-	Profile.prototype.componentDidMount = function componentDidMount() {
-		// start a timer for the clock:
-		this.timer = setInterval(this.updateTime, 1000);
-	};
-
-	// gets called just before navigating away from the route
-
-
-	Profile.prototype.componentWillUnmount = function componentWillUnmount() {
-		clearInterval(this.timer);
-	};
-
-	// Note: `user` comes from the URL, courtesy of our router
-
-
-	Profile.prototype.render = function render(_ref, _ref2) {
-		var user = _ref.user;
-		var time = _ref2.time,
-		    count = _ref2.count;
-
-		return Object(preact_min["h"])(
-			'div',
-			{ 'class': profile_style_default.a.profile },
-			Object(preact_min["h"])(
-				'h1',
-				null,
-				'Profile: ',
-				user
-			),
-			Object(preact_min["h"])(
-				'p',
-				null,
-				'This is the user profile for a user named ',
-				user,
-				'.'
-			),
-			Object(preact_min["h"])(
-				'div',
-				null,
-				'Current time: ',
-				new Date(time).toLocaleString()
-			),
-			Object(preact_min["h"])(
-				'p',
-				null,
-				Object(preact_min["h"])(
-					'button',
-					{ onClick: this.increment },
-					'Click Me'
-				),
-				' ',
-				'Clicked ',
-				count,
-				' times.'
-			)
-		);
-	};
-
-	return Profile;
-}(preact_min["Component"]);
-
-
 // CONCATENATED MODULE: ./components/app.js
-
-
-function app__classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function app__possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function app__inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+var _this = this;
 
 
 
 
 
-
-// Code-splitting is automated for routes
 
 
 
@@ -673,57 +627,29 @@ var app__ref = Object(preact_min["h"])(header, null);
 
 var app__ref2 = Object(preact_min["h"])(home, { path: '/' });
 
-var _ref3 = Object(preact_min["h"])(profile_Profile, { path: '/profile/', user: 'me' });
-
-var _ref4 = Object(preact_min["h"])(profile_Profile, { path: '/profile/:user' });
-
-var app_App = function (_Component) {
-	app__inherits(App, _Component);
-
-	function App() {
-		var _temp, _this, _ret;
-
-		app__classCallCheck(this, App);
-
-		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-			args[_key] = arguments[_key];
-		}
-
-		return _ret = (_temp = (_this = app__possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.handleRoute = function (e) {
-			_this.currentUrl = e.url;
-		}, _temp), app__possibleConstructorReturn(_this, _ret);
-	}
-
-	/** Gets fired when the route changes.
-  *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
-  *	@param {string} event.url	The newly routed URL
-  */
-
-
-	App.prototype.render = function render() {
-		return Object(preact_min["h"])(
-			'div',
-			{ id: 'app' },
-			app__ref,
-			Object(preact_min["h"])(
-				preact_router_es["Router"],
-				{ onChange: this.handleRoute },
-				app__ref2,
-				_ref3,
-				_ref4
-			)
-		);
+var app_App = function App() {
+	var handleRoute = function handleRoute(e) {
+		_this.currentUrl = e.url;
 	};
 
-	return App;
-}(preact_min["Component"]);
+	return Object(preact_min["h"])(
+		'div',
+		{ id: 'app' },
+		app__ref,
+		Object(preact_min["h"])(
+			preact_router_es["Router"],
+			{ onChange: handleRoute },
+			app__ref2
+		)
+	);
+};
 
-
+/* harmony default export */ var app = (app_App);
 // CONCATENATED MODULE: ./index.js
 
 
 
-/* harmony default export */ var index = __webpack_exports__["default"] = (app_App);
+/* harmony default export */ var index = __webpack_exports__["default"] = (app);
 
 /***/ }),
 
@@ -928,14 +854,6 @@ var app_App = function (_Component) {
     }, render: function render() {} });var j = { h: e, createElement: e, cloneElement: o, createRef: L, Component: U, render: S, rerender: i, options: M }; true ? module.exports = j : self.preact = j;
 }();
 //# sourceMappingURL=preact.min.js.map
-
-/***/ }),
-
-/***/ "Tv6c":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-module.exports = {"profile":"profile__t2Dqz"};
 
 /***/ }),
 
