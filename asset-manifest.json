@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "maxflower.github.io/static/css/main.dd4203b8.chunk.css",
+    "main.css": "maxflower.github.io/static/css/main.1a5fc81b.chunk.css",
     "main.js": "maxflower.github.io/static/js/main.0e1ae5ce.chunk.js",
     "main.js.map": "maxflower.github.io/static/js/main.0e1ae5ce.chunk.js.map",
     "runtime-main.js": "maxflower.github.io/static/js/runtime-main.9ca31999.js",
@@ -8,15 +8,15 @@
     "static/js/2.e6e43e16.chunk.js": "maxflower.github.io/static/js/2.e6e43e16.chunk.js",
     "static/js/2.e6e43e16.chunk.js.map": "maxflower.github.io/static/js/2.e6e43e16.chunk.js.map",
     "index.html": "maxflower.github.io/index.html",
-    "precache-manifest.515ec12367f39f2cd9541465fe19543d.js": "maxflower.github.io/precache-manifest.515ec12367f39f2cd9541465fe19543d.js",
+    "precache-manifest.72d8941c97f1532b2ad870e5d775f341.js": "maxflower.github.io/precache-manifest.72d8941c97f1532b2ad870e5d775f341.js",
     "service-worker.js": "maxflower.github.io/service-worker.js",
-    "static/css/main.dd4203b8.chunk.css.map": "maxflower.github.io/static/css/main.dd4203b8.chunk.css.map",
+    "static/css/main.1a5fc81b.chunk.css.map": "maxflower.github.io/static/css/main.1a5fc81b.chunk.css.map",
     "static/media/index.scss": "maxflower.github.io/static/media/Roobert-Regular.95a64198.otf"
   },
   "entrypoints": [
     "static/js/runtime-main.9ca31999.js",
     "static/js/2.e6e43e16.chunk.js",
-    "static/css/main.dd4203b8.chunk.css",
+    "static/css/main.1a5fc81b.chunk.css",
     "static/js/main.0e1ae5ce.chunk.js"
   ]
 }
