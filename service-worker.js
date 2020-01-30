@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "maxflower.github.io/precache-manifest.652c8a256470c573cf23f0b93df596c5.js"
+  "maxflower.github.io/precache-manifest.70541c5a1b64a2766227c066cc20be33.js"
 );
 
 self.addEventListener('message', (event) => {
