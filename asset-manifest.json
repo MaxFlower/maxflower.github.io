@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "maxflower.github.io/static/css/main.ab8b231e.chunk.css",
-    "main.js": "maxflower.github.io/static/js/main.57c811f2.chunk.js",
-    "main.js.map": "maxflower.github.io/static/js/main.57c811f2.chunk.js.map",
+    "main.css": "maxflower.github.io/static/css/main.7682d32a.chunk.css",
+    "main.js": "maxflower.github.io/static/js/main.0ffae6d4.chunk.js",
+    "main.js.map": "maxflower.github.io/static/js/main.0ffae6d4.chunk.js.map",
     "runtime-main.js": "maxflower.github.io/static/js/runtime-main.49d570da.js",
     "runtime-main.js.map": "maxflower.github.io/static/js/runtime-main.49d570da.js.map",
-    "static/js/2.3c432b2c.chunk.js": "maxflower.github.io/static/js/2.3c432b2c.chunk.js",
-    "static/js/2.3c432b2c.chunk.js.map": "maxflower.github.io/static/js/2.3c432b2c.chunk.js.map",
+    "static/js/2.6b593179.chunk.js": "maxflower.github.io/static/js/2.6b593179.chunk.js",
+    "static/js/2.6b593179.chunk.js.map": "maxflower.github.io/static/js/2.6b593179.chunk.js.map",
     "index.html": "maxflower.github.io/index.html",
-    "precache-manifest.feee870b6f87222214fed9f3f8ee19c4.js": "maxflower.github.io/precache-manifest.feee870b6f87222214fed9f3f8ee19c4.js",
+    "precache-manifest.64d21d7b3f49be3918f67781f5ce08b7.js": "maxflower.github.io/precache-manifest.64d21d7b3f49be3918f67781f5ce08b7.js",
     "service-worker.js": "maxflower.github.io/service-worker.js",
-    "static/css/main.ab8b231e.chunk.css.map": "maxflower.github.io/static/css/main.ab8b231e.chunk.css.map"
+    "static/css/main.7682d32a.chunk.css.map": "maxflower.github.io/static/css/main.7682d32a.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.49d570da.js",
-    "static/js/2.3c432b2c.chunk.js",
-    "static/css/main.ab8b231e.chunk.css",
-    "static/js/main.57c811f2.chunk.js"
+    "static/js/2.6b593179.chunk.js",
+    "static/css/main.7682d32a.chunk.css",
+    "static/js/main.0ffae6d4.chunk.js"
   ]
 }
